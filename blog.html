@@ -2,48 +2,293 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mrivas_C - Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>IA la nueva era: Novedades de GPT-5 | Mrivas_C</title>
+
+    <!-- Meta SEO básica -->
+    <meta name="description" content="Descubre las novedades de GPT-5 y cómo la nueva era de la inteligencia artificial transforma el aprendizaje y el trabajo. Guía clara para entusiastas de IA y estudiantes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph para compartir en redes -->
+    <meta property="og:title" content="IA la nueva era: Novedades de GPT-5">
+    <meta property="og:description" content="Todo lo esencial sobre GPT-5 explicado para entusiastas de IA y estudiantes.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tusitio.ejemplo/blog.html">
+    <meta property="og:image" content="https://tusitio.ejemplo/assets/og-gpt5.png">
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Microdatos JSON-LD: Course + Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "IA la nueva era: Novedades de GPT-5",
+      "description": "Guía introductoria sobre las novedades de GPT-5 para entusiastas de IA y estudiantes.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Mrivas_C",
+        "url": "https://tusitio.ejemplo"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mrivas_C",
+      "url": "https://tusitio.ejemplo",
+      "logo": "https://tusitio.ejemplo/assets/logo.png"
+    }
+    </script>
+
+    <!-- Placeholder de Analytics (comentado) -->
+    <!--
+    <script>
+      // Ejemplo de integración futura con Google Analytics 4
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
+      // gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Mrivas_C</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <div class="logo" aria-label="Mrivas_C">
+                Mrivas_C
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/nosotros.html">Nosotros</a></li>
+                    <li><a href="/blog.html" aria-current="page">Blog</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="main-content">
-        <div class="container">
-            <h2>Blog</h2>
-
-            <div class="section">
-                <h3>Entrada de blog 1</h3>
-                <p>Resumen breve de tu primera entrada de blog...</p>
+    <main id="main-content" role="main">
+        <!-- HERO -->
+        <section class="hero hero-blog">
+            <div class="container hero-content">
+                <h1>IA la nueva era: Novedades de GPT-5</h1>
+                <p class="hero-subtitle">
+                    Descubre cómo la nueva generación GPT-5 está cambiando la forma en que aprendemos,
+                    investigamos y experimentamos con la inteligencia artificial.
+                </p>
+                <button class="btn-primary" type="button" id="scroll-to-form">
+                    Recibe las novedades
+                </button>
             </div>
+            <!-- Imagen decorativa con texto alternativo descriptivo -->
+            <figure class="hero-figure">
+                <img src="/assets/hero-gpt5.png"
+                     alt="Ilustración conceptual de inteligencia artificial de nueva generación"
+                     loading="lazy">
+            </figure>
+        </section>
 
-            <div class="section">
-                <h3>Entrada de blog 2</h3>
-                <p>Resumen breve de tu segunda entrada de blog...</p>
+        <!-- BENEFICIOS -->
+        <section class="section" aria-labelledby="beneficios-title">
+            <div class="container">
+                <h2 id="beneficios-title">¿Por qué importa GPT-5?</h2>
+                <p class="section-intro">
+                    GPT-5 representa un salto en comprensión de contexto, calidad de respuesta
+                    y posibilidades para quienes usan IA en su aprendizaje y proyectos.
+                </p>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>Comprensión más profunda</h3>
+                        <p>
+                            Modelos más contextuales, capaces de seguir conversaciones largas sin
+                            perder coherencia ni la intención original.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Respuestas más precisas</h3>
+                        <p>
+                            Mejor alineación con tus preguntas, menos respuestas ambiguas
+                            y mayor calidad en explicaciones técnicas y educativas.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Aplicaciones educativas</h3>
+                        <p>
+                            Asistentes personalizados para estudiantes, mentores virtuales
+                            y apoyo 24/7 para reforzar conceptos clave.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Integraciones avanzadas</h3>
+                        <p>
+                            Mayor facilidad para integrar GPT-5 en flujos de trabajo, APIs,
+                            herramientas de productividad y entornos de aprendizaje.
+                        </p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="section">
-                <h3>Entrada de blog 3</h3>
-                <p>Resumen breve de tu tercera entrada de blog...</p>
+        <!-- CURRÍCULO -->
+        <section class="section section-alt" aria-labelledby="curriculo-title">
+            <div class="container">
+                <h2 id="curriculo-title">Lo que aprenderás en esta guía</h2>
+                <ul class="curriculum-list">
+                    <li>Qué diferencia a GPT-5 de las versiones anteriores.</li>
+                    <li>Casos de uso reales para estudiantes y entusiastas de IA.</li>
+                    <li>Buenas prácticas para experimentar con modelos avanzados.</li>
+                    <li>Riesgos, límites y uso responsable de la tecnología.</li>
+                    <li>Recursos para seguir aprendiendo y mantenerse actualizado.</li>
+                </ul>
             </div>
+        </section>
 
+        <!-- TESTIMONIOS -->
+        <section class="section" aria-labelledby="testimonios-title">
+            <div class="container">
+                <h2 id="testimonios-title">Testimonios</h2>
+                <div class="cards-grid testimonials-grid">
+                    <article class="card testimonial">
+                        <p class="testimonial-text">
+                            “Esta guía me ayudó a entender en minutos lo que antes me tomaba horas de lectura técnica.”
+                        </p>
+                        <p class="testimonial-author">Ana López</p>
+                        <p class="testimonial-role">Estudiante de Ingeniería</p>
+                    </article>
+
+                    <article class="card testimonial">
+                        <p class="testimonial-text">
+                            “GPT-5 abre un nuevo capítulo para quienes usamos IA en proyectos académicos y personales.”
+                        </p>
+                        <p class="testimonial-author">Carlos Méndez</p>
+                        <p class="testimonial-role">Entusiasta de IA</p>
+                    </article>
+
+                    <article class="card testimonial">
+                        <p class="testimonial-text">
+                            “Ahora tengo una visión clara de cómo aplicar GPT-5 en mi aprendizaje diario.”
+                        </p>
+                        <p class="testimonial-author">María Ruiz</p>
+                        <p class="testimonial-role">Profesional en transición</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-alt" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title">Preguntas frecuentes</h2>
+
+                <div class="faq-list">
+                    <details>
+                        <summary>¿Necesito experiencia previa en IA para entender esta guía?</summary>
+                        <p>No. El contenido está pensado para entusiastas y estudiantes que están iniciando en IA.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿GPT-5 ya está disponible para todos los usuarios?</summary>
+                        <p>La disponibilidad puede variar según la plataforma y el tipo de cuenta. Revisa siempre la documentación oficial de tu proveedor.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Puedo usar GPT-5 en proyectos académicos?</summary>
+                        <p>Sí, siempre que respetes las políticas de uso, cites adecuadamente las fuentes y cumplas con las normas de tu institución.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Qué tan importante es la ética al usar modelos avanzados de IA?</summary>
+                        <p>Es esencial. El uso responsable incluye cuidar la privacidad, evitar sesgos y revisar críticamente cada resultado.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Cómo me suscribo para recibir novedades y actualizaciones?</summary>
+                        <p>Completa el formulario de la sección siguiente y recibirás actualizaciones seleccionadas sobre IA y GPT-5.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO LEAD -->
+        <section class="section" aria-labelledby="form-title">
+            <div class="container container-form">
+                <div class="form-info">
+                    <h2 id="form-title">Recibe las novedades de GPT-5</h2>
+                    <p>
+                        Deja tus datos y recibe actualizaciones, recursos y ejemplos prácticos
+                        sobre cómo sacar el máximo provecho de la nueva era de la IA.
+                    </p>
+                </div>
+
+                <form id="lead-form" class="lead-form" aria-describedby="form-feedback">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="perfil">Perfil</label>
+                        <select id="perfil" name="perfil" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="profesional">Profesional</option>
+                            <option value="entusiasta">Entusiasta de IA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Comentario (opcional)</label>
+                        <textarea id="comentario" name="comentario" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Quiero recibir novedades</button>
+
+                    <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="section section-alt section-cta-final">
+            <div class="container">
+                <h2>La nueva era de la IA ya empezó</h2>
+                <p>
+                    Mantente un paso adelante y entiende cómo GPT-5 puede acompañar tu aprendizaje y tus proyectos.
+                </p>
+                <button class="btn-secondary" type="button" id="scroll-to-form-bottom">
+                    Quiero recibir novedades
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>© 2025 Mrivas_C. Todos los derechos reservados.</p>
+            <nav aria-label="Enlaces de pie de página">
+                <a href="/nosotros.html">Nosotros</a>
+                <a href="/contacto.html">Contacto</a>
+                <a href="#">Política de privacidad</a>
+            </nav>
         </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Mrivas_C. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- JavaScript mínimo -->
+    <script src="/js/app.js" defer></script>
 </body>
 </html>
+
+
