@@ -14,3 +14,5 @@ entusiastas de inteligencia artificial y estudiantes.
 /assets/             (imágenes, íconos y recursos estáticos)
 /README.md
 /LICENSE             (MIT)
+
+Un commit mas a mi repositorio desde mi Github
