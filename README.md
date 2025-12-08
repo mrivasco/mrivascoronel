@@ -16,3 +16,5 @@ entusiastas de inteligencia artificial y estudiantes.
 /LICENSE             (MIT)
 
 Un commit mas a mi repositorio desde mi Github
+Un cambio mas
+
