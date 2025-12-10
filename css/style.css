@@ -1,93 +1,312 @@
-/* Configuración general */
-body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-    font-size: 20px;
-    background-color: #003a70; /* azul corporativo */
-    color: white;
-}
-
-/* Header */
-header {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 15px 0;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+/* RESET BÁSICO Y VARIABLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-nav a {
-    color: white;
+:root {
+    --color-bg: #0f172a;          /* azul muy oscuro */
+    --color-bg-alt: #0b1220;
+    --color-primary: #2563eb;     /* azul principal */
+    --color-primary-soft: #1d4ed8;
+    --color-text: #e5e7eb;        /* gris claro */
+    --color-text-muted: #9ca3af;
+    --color-card-bg: #111827;
+    --color-border: #1f2933;
+    --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ESTILOS GENERALES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* CONTENEDOR */
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* HEADER */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+/* NAV */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
     text-decoration: none;
-    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-text);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.main-nav a.active {
+    color: var(--color-text);
+    border-color: var(--color-primary);
 }
 
 /* HERO */
 .hero {
     position: relative;
-    padding: 120px 0;
-    text-align: center;
-    background-color: #004b94; /* tono azul */
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+    padding: 4rem 0 3rem;
+    
+    /* Imagen en la parte superior (ajusta la ruta a tu imagen real) */
+    background:
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98)),
+        url('../img/fondo-tecnologia.jpg') no-repeat center top / cover;
 }
 
-.hero-image {
-    width: 180px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.hero-overlay {
+    /* Si quieres una capa extra, puedes usar esto.
+       Si no la usas, puedes eliminar el div del HTML. */
+    display: none;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 3rem;
+    align-items: center;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-}
-
-/* Botón principal */
-.btn-primary {
-    background-color: white;
-    color: #003a70;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
+.hero-text h1 {
+    font-size: clamp(2.1rem, 3vw, 2.8rem);
+    margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.btn-primary:hover {
-    background-color: #e6e6e6;
+.hero-text p {
+    font-size: 1rem;
+    max-width: 540px;
+    color: var(--color-text-muted);
+    margin-bottom: 1.8rem;
 }
 
-/* Footer */
-footer {
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+/* BOTONES */
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-soft));
+    color: #f9fafb;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 24px 45px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border-color: rgba(148, 163, 184, 0.7);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(15, 23, 42, 0.9);
+    transform: translateY(-1px);
+}
+
+/* HERO IMAGE */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(148, 163, 184, 0.7);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* FEATURES / SECCIÓN DE VALOR */
+.features {
+    background: radial-gradient(circle at top, #1f2937 0, var(--color-bg-alt) 45%, var(--color-bg) 100%);
+    padding: 3.5rem 0 4rem;
+}
+
+.features h2 {
+    font-size: 1.7rem;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.75rem;
+}
+
+.features-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.8rem;
+}
+
+.feature-card {
+    background-color: var(--color-card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem 1.4rem;
+    border: 1px solid rgba(55, 65, 81, 0.7);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+    border-color: var(--color-primary);
+}
+
+/* FOOTER */
+.main-footer {
+    border-top: 1px solid rgba(55, 65, 81, 0.5);
+    background-color: #020617;
+    padding: 1.4rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.footer-secondary {
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        order: -1; /* Foto arriba en móviles */
+        margin-bottom: 1.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
