@@ -2,21 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Manuel Rivas Coronel</title>
+    <title>Manuel Rivas Coronel | Mrivas_C</title>
+
+    <!-- Meta responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fuente Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Hoja de estilos principal -->
+    <!-- Asegúrate de que la ruta coincida con tu estructura de carpetas -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header>
+    <!-- HEADER -->
+    <header class="main-header">
         <div class="container header-container">
             <div class="logo">Mrivas_C</div>
-            <nav>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -25,25 +30,77 @@
         </div>
     </header>
 
-    <!-- Sección Hero -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="container hero-content">
-            <img src="img/foto-ejemplo.png" alt="Imagen de portada" class="hero-image">
+    <main>
+        <!-- HERO con imagen de fondo en la parte superior -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Bienvenido a Mrivas_C</h1>
+                    <p>
+                        Portafolio profesional de Manuel Rivas Coronel, 
+                        Ingeniero en Sistemas y especialista en Telecomunicaciones, 
+                        Business Intelligence y soluciones tecnológicas para la toma de decisiones.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="nosotros.html" class="btn-primary">Conocer más</a>
+                        <a href="contacto.html" class="btn-secondary">Contactar</a>
+                    </div>
+                </div>
 
-            <h1>Bienvenido a Mrivas_C</h1>
-            <p>
-                Este es un ejemplo de landing page mejorada con fondo azul, 
-                tipografía Lato y texto optimizado para tu sitio web.
+                <div class="hero-image-wrapper">
+                    <!-- Imagen de perfil o ilustrativa -->
+                    <img src="img/foto-ejemplo.png" alt="Foto de Manuel Rivas Coronel" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de resúmen de servicios / skills -->
+        <section class="features">
+            <div class="container">
+                <h2>¿Qué puedo aportar a tu organización?</h2>
+                <p class="features-intro">
+                    Combino experiencia en telecomunicaciones, análisis de datos y automatización 
+                    para transformar información en decisiones estratégicas.
+                </p>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <h3>Business Intelligence & Power BI</h3>
+                        <p>
+                            Diseño y desarrollo dashboards claros y accionables 
+                            para dirección y áreas operativas, integrando múltiples fuentes de datos.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Telecomunicaciones & Infraestructura</h3>
+                        <p>
+                            Gestión y optimización de redes, servicios críticos y proveedores 
+                            asegurando disponibilidad, performance y continuidad del negocio.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Automatización & Soporte</h3>
+                        <p>
+                            Implemento soluciones que reducen tareas manuales, 
+                            mejoran tiempos de respuesta y elevan la experiencia de usuario interno.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>© 2025 Mrivas_C · Todos los derechos reservados.</p>
+            <p class="footer-secondary">
+                Desarrollado por Manuel Rivas Coronel.
             </p>
-
-            <a href="nosotros.html" class="btn-primary">Conocer más</a>
         </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Mrivasco Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
-
